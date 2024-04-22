@@ -1,0 +1,45 @@
+html {
+    height: 100%;
+    width: 100%;
+    
+}
+
+body {
+    height: auto;
+    width: 100%;
+    
+}
+
+.container {
+    height: 100%;
+}
+
+.btn.one {
+    width: 14.5vw;
+    height: 7.5vh;
+    margin: auto;
+    font-weight: 600;
+    align-items: center;
+    background-color:orange;
+}
+
+.btn.two {
+    align-content: center;
+    width: 14.5vw;
+    height: 7.5vh;
+    margin: auto;
+    font-weight: 600;
+    background-color:#ff4500;
+}
+
+.table {
+    width: 100vw;
+}
+
+.text-center {
+    justify-self: center;
+}
+
+.sort:hover {
+    background-color: darkgray;
+}

@@ -1,0 +1,28 @@
+TODO:
+    -DONE Use Postgresql as database
+    -DONE Ability to log in as an admin user with the email id "admin@moweb.com" and password "Admin123!@#"
+    -DONE Companies model: id (primary key) company_name (required)
+    -DONE Employees model: id (primary key), first_name (required), last_name (required), company_id (foreign key to Company's primary key), profile_pic, email_address, DOB
+    - Employees Listing:
+        -DONE Show employee list - Fields: Id, Full Name, Profile Pic, Company Name, Email Address
+        -DONE Provide a Search and Sorting feature in this Listing on the name, and email address of the employee
+        -DONE Have "Add Employee" and "Edit Employee" methods, with appropriate validations
+        -DONE Use proper unique file naming while storing profile pictures in local folders, and allow only image types in a file upload
+        -DONE Add validation for do not enter data for that employee whose ages are under 18
+        -DONE Also, offer a "Delete" endpoint with soft delete (Note: soft deleted employee should not come list)
+    - Company Listing:
+        -DONE Show companies list - Fields: Id, Name, Total Employees Count
+        -DONE Provide a Search and Sorting feature in this Listing on company names.
+        -DONE Have "Add Company" and "Edit Company" methods, with appropriate validations
+        -DONE Also offer "Delete" endpoint with soft delete (Note: the soft deleted company sh ould not come list)
+    - Signal:
+        -DONE Send the email to the employee when the user creates the employee
+        -DONE When a user soft delete any company then also soft delete those employees who belong to that company
+    - Cronjob
+        - Send birthday wishes mail to the employee at midnight
+
+
+
+
+
+        

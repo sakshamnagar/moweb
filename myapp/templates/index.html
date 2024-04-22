@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'static/styles/styles.css'%}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </head>
+<body>
+    <div>
+        <header class="p-3 mb-3 border-bottom bg-success">
+            <div class="container">
+              <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 link-body-emphasis text-decoration-none">
+                  <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+                </a>
+        
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                  <li><a href="{% url 'home' %}" class="nav-link px-2 link-secondary text-white">CRUD</a></li>
+                  <li><a href="{% url 'company' %}" class="nav-link px-2 link-body-emphasis text-white">Companies</a></li>
+                  <li><a href="{% url 'employee' %}" class="nav-link px-2 link-body-emphasis text-white">Employees</a></li>
+                  <li><a href="{% url 'bin' %}" class="nav-link px-2 link-body-emphasis text-white">Bin</a></li>
+                </ul>
+        {% block search %}
+              <div>d</div>
+        {% endblock %}   
+              </div>
+            </div>
+          </header>
+    </div>
+     
+{% block header %}
+
+
+
+<div class="modal d-block p-4 py-md-5">
+  <div class="modal-dialog">
+    <div class="modal-content rounded-4 border-0 w-75 mx-5">
+      <div class="modal-body">
+        <div class="mt-5 pt-5">
+          <h4 class="mb-5">Welcome! Please select the directory you want to explore.</h4>
+          <div class=""><a class="btn one bg-success text-white" href="{% url 'company' %}">Company Directory</a></div>
+          <div class="mt-4"><a class="btn two bg-success text-white" href="{% url 'employee' %}">Employee Directory</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+{% endblock %}
+</body>
+</html>

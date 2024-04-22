@@ -1,0 +1,28 @@
+{% extends "index.html" %}
+{% load static %}
+{% block header %}
+
+<h2>Companies</h2>
+{% for i in company %}
+<div class="d-flex">
+    <div>
+        {{i.name}}
+    </div>
+    <div>
+        <a href="{% url 'restore-company' i.pk %}">Restore</a>
+    </div>
+</div>
+{% endfor %}
+
+<h2>Employees</h2>
+{% for i in employee %}
+<div class="d-flex">
+    <div>
+        {{i.first_name}} {{i.last_name}}
+    </div>
+    <div>
+        <a href="{% url 'restore-employee' i.pk %}">Restore</a>
+    </div>
+</div>
+{% endfor %}
+{% endblock %}
